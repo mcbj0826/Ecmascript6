@@ -89,3 +89,72 @@ a = 'a'
 
 console.log (a)
 
+// Objeto Mejorada ES6
+
+let name = 'Oscar '
+let age = 32
+
+obj2= {name, age }
+
+//sin ES6 (ES5)
+obj = { name: name, age:age }
+
+console.log(obj2)
+
+//Arrow Function
+
+const names = [
+    { name: 'Oscar', age: 32 },
+    { name: 'Yesica', age: 27 }
+]
+
+//sin ES6
+
+let listOfNames = names.map(function(item){
+    console.log(item.name)
+})
+
+//COn ES6
+
+let listOfNames2 = names.map(item => console.log(item.name))
+
+//2 forma
+
+const listOfNames3 = (name, age, country) => {
+    // Aqui va el Código
+}
+
+// 3forma
+
+const listOfNames4 = name =>{
+   // ... Awui va el código
+}
+
+// 4 forma
+
+const square = num => num * num
+
+
+//Promesas para manejar el Asyncronismo
+
+const helloPromise = () => {
+    return new Promise((resolve, reject) =>{
+        if(true) {
+            resolve ('Hey')
+        }else {
+            reject ('Ups!!')
+
+        }
+    })
+}
+
+helloPromise()
+    .then (response => console.log(response))
+    .then (() => console.log('hola'))
+    .catch(error => console.log(error))
+
+
+
+
+
+
